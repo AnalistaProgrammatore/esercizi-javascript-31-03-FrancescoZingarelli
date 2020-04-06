@@ -1,9 +1,11 @@
 Function.prototype.defer = function(ms, ...args) {
-    timeoutID = setTimeout(this, ms, ...args)
+    return setTimeout(this, ms, ...args)
 }
 
-let funz = function(a, b) {
+
+
+let logTwoArgs = function(a, b) {
     console.log(a, b);
 }
 
-funz.defer(2000, "buongiorno", "buonasera");
+let timeout = logTwoArgs.defer(2000, "buongiorno", "buonasera");
